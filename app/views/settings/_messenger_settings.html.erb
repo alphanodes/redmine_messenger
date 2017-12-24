@@ -59,6 +59,10 @@
   <%= check_box_tag 'settings[new_include_description]', 1, @settings[:new_include_description].to_i == 1 %>
 </p>
 <p>
+  <%= content_tag(:label, l(:label_settings_updated_include_assignee)) %>
+  <%= check_box_tag 'settings[updated_include_assignee]', 1, @settings[:updated_include_assignee].to_i == 1 %>
+</p>
+<p>
   <%= content_tag(:label, l(:label_settings_updated_include_description)) %>
   <%= check_box_tag 'settings[updated_include_description]', 1, @settings[:updated_include_description].to_i == 1 %>
 </p>
