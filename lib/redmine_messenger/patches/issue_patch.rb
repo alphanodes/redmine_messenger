@@ -70,8 +70,16 @@ module RedmineMessenger
           if current_journal.notes.present? && Messenger.setting_for_project(project, :updated_include_description)
             attachment[:text] = ERB::Util.html_escape(current_journal.notes)
           end
+          attachment[:fields] = []
+          if RedmineMessenger.setting?(:updated_include_assignee)
+            attachment[:fields] << {
+              title: I18n.t(:field_assigned_to),
+              value: ERB::Util.html_escape(assigned_to.to_s),
+              short: true
+            }
+          end
           fields = current_journal.details.map { |d| Messenger.detail_to_field d }
-          attachment[:fields] = fields if fields.any?
+          attachment[:fields] += fields if fields.any?
 
           Messenger.speak(l(:label_messenger_issue_updated,
                             project_url: "<#{Messenger.object_url project}|#{ERB::Util.html_escape(project)}>",

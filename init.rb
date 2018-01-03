@@ -26,6 +26,7 @@ Redmine::Plugin.register :redmine_messenger do
     display_watchers: '0',
     post_updates: '1',
     new_include_description: '1',
+    updated_include_assignee: '0',
     updated_include_description: '1',
     post_private_issues: '1',
     post_private_notes: '1',

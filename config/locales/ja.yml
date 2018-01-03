@@ -37,6 +37,7 @@ ja:
   label_settings_post_updates: チケットの更新
   label_settings_post_wiki_updates: Wikiの更新
   label_settings_post_wiki: Wikiの作成
+  label_settings_updated_include_assignee: チケット更新時に担当者を含める
   label_settings_updated_include_description: チケット更新時に説明を含める
   messenger_channel_info_html: チャンネルを指定する必要があります。複数のチャンネルを指定する場合は,(カンマ)で区切って下さい。
   messenger_contacts_intro: メッセンジャーに送信するチケットのイベントにチェックを入れて下さい。
