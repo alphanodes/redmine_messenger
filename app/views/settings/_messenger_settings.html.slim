@@ -40,7 +40,7 @@ fieldset#messenger_settings.box.tabular
     = check_box_tag 'settings[post_updates]', 1, @settings[:post_updates].to_i == 1
   p
     = content_tag(:label, l(:label_settings_post_actions))
-    = select_tag 'settings[post_actions]', options_for_select(["any", "project", "tracker", "parent", "status", "priority", "subject", "author", "assigned_to", "updated_on", "category", "fixed_version", "start_date", "due_date", "estimated_hours", "done_ratio", "created"], @settings[:post_actions]), :multiple => true
+    = select_tag 'settings[post_actions]', options_for_select(["any", [l(:field_project), "project"], [l(:field_tracker), "tracker"], [l(:field_parent), "parent"], [l(:field_status), "status"], [l(:field_priority), "priority"], [l(:field_subject), "subject"], [l(:field_author), "author"], [l(:field_assigned_to), "assigned_to"], [l(:field_updated_on), "updated_on"], [l(:field_category), "category"], [l(:field_fixed_version), "fixed_version"], [l(:field_start_date), "start_date"], [l(:field_due_date), "due_date"], [l(:field_estimated_hours), "estimated_hours"], [l(:field_done_ratio), "done_ratio"]], @settings[:post_actions]), :multiple => true
   p
     = content_tag(:label, l(:label_settings_new_include_description))
     = check_box_tag 'settings[new_include_description]', 1, @settings[:new_include_description].to_i == 1
