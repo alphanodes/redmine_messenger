@@ -41,6 +41,7 @@ en:
   label_settings_post_updates: Issue updates?
   label_settings_post_wiki_updates: Wiki updates?
   label_settings_post_wiki: Post Wiki added?
+  label_settings_post_actions: When updating which fields?
   label_settings_updated_include_description: Description in update issue?
   messenger_channel_info_html: 'Here you have to specify the channel, which should be used. You can define multible channels, seperated by comma'
   messenger_contacts_intro: Activate the changes for Issues that should be sent to the pre-defined Messenger channel.

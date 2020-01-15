@@ -41,6 +41,7 @@ fr:
   label_settings_post_updates: Publier pour chaque mises à jour ?
   label_settings_post_wiki_updates: Mises à jour du wiki ?
   label_settings_post_wiki: Post Wiki ajouté ?
+  label_settings_post_actions: Lors de la mise à jour de quels champs?
   label_settings_updated_include_description: Description suite à une mise à jour ?
   messenger_channel_info_html: 'Vous devez spécifier le canal à utiliser. Vous pouvez définir plusieurs canaux, séparés par une virgule.'
   messenger_contacts_intro: Activer les modifications pour les contacts à envoyer au canal Messenger prédéfini.

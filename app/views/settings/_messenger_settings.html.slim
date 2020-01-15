@@ -39,6 +39,9 @@ fieldset#messenger_settings.box.tabular
     = content_tag(:label, l(:label_settings_post_updates))
     = check_box_tag 'settings[post_updates]', 1, @settings[:post_updates].to_i == 1
   p
+    = content_tag(:label, l(:label_settings_post_actions))
+    = select_tag 'settings[post_actions]', options_for_select(["any", "project", "tracker", "parent", "status", "priority", "subject", "author", "assigned_to", "updated_on", "category", "fixed_version", "start_date", "due_date", "estimated_hours", "done_ratio", "created"], @settings[:post_actions]), :multiple => true
+  p
     = content_tag(:label, l(:label_settings_new_include_description))
     = check_box_tag 'settings[new_include_description]', 1, @settings[:new_include_description].to_i == 1
   p
