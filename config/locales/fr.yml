@@ -1,4 +1,10 @@
 # French strings
+##########################################################################
+#            Translation by Zer00CooL - www.visionduweb.fr               #
+#                     Created for redmine_messenger                      #
+# Tested and optimized with Redmine and Slack for lecannabiste.com media #
+#                    Create 04/2019 -- Update 01/2020                    #
+##########################################################################
 fr:
   default_mentionsl_info: Personnes à notifier par défaut, séparées par des virgules (@all, @here)
   error_messenger_invalid_url: n'est pas une URL valide
@@ -19,15 +25,15 @@ fr:
   label_messenger_wiki_created: "[%{project_url}] Wiki %{url} créé par *%{user}*"
   label_messenger_wiki_updated: "[%{project_url}] Wiki %{url} mis à jour par *%{user}*"
   label_messenger: Messenger
-  label_settings_auto_mentions: Convert names to mentions ?
-  label_settings_default_mentions: Default people for mentions
-  label_settings_display_watchers: Afficher l'utilisateur assigné au ticket ?
+  label_settings_auto_mentions: Convertir les noms en mentions
+  label_settings_default_mentions: Personnes mentionnées par défaut
+  label_settings_display_watchers: Afficher l'utilisateur assigné au ticket
   label_settings_messenger_channel: Messenger - Nom du salon
   label_settings_messenger_icon: Messenger - Icône affiché
   label_settings_messenger_url: Messenger - URL WebHook entrant
   label_settings_messenger_username: Messenger - Nom du robot
   label_settings_messenger_verify_ssl: Vérifier SSL
-  label_settings_new_include_description: Description du nouveau ticket ?
+  label_settings_new_include_description: Inclure la description des nouveaux tickets
   label_settings_post_contact_updates: Mises à jour de contact ?
   label_settings_post_contact: Contact ajouté ?
   label_settings_post_db_updates: Mises à jour des entrées de base de données ?
@@ -36,21 +42,21 @@ fr:
   label_settings_post_password: Mot de passe ajouté ?
   label_settings_post_private_contacts: Contacts privés ?
   label_settings_post_private_db: Entrées de base de données privées ?
-  label_settings_post_private_issues: Mises à jour des tickets privés?
-  label_settings_post_private_notes: Mises à jour des notes privées ?
-  label_settings_post_updates: Publier pour chaque mises à jour ?
-  label_settings_post_wiki_updates: Mises à jour du wiki ?
-  label_settings_post_wiki: Post Wiki ajouté ?
+  label_settings_post_private_issues: Inclure les mises à jour des tickets privés
+  label_settings_post_private_notes: Inclure les mises à jour des notes privées
+  label_settings_post_updates: Inclure toutes les mises à jour
+  label_settings_post_wiki_updates: Inclure les mises à jour du wiki
+  label_settings_post_wiki: Inclure les publications du wiki
   label_settings_post_actions: Lors de la mise à jour de quels champs?
-  label_settings_updated_include_description: Description suite à une mise à jour ?
-  messenger_channel_info_html: 'Vous devez spécifier le canal à utiliser. Vous pouvez définir plusieurs canaux, séparés par une virgule.'
+  label_settings_updated_include_description: Inclure la description suite à une mise à jour
+  messenger_channel_info_html: 'Spécifier le canal à utiliser. Vous pouvez définir plusieurs canaux, séparés par une virgule.'
   messenger_contacts_intro: Activer les modifications pour les contacts à envoyer au canal Messenger prédéfini.
   messenger_db_intro: Activer les modifications pour la base de données à envoyer au canal Messenger prédéfini.
   messenger_issue_intro: Activer les modifications pour les tickets à envoyer au canal Messenger prédéfini.
   messenger_passwords_intro: Activez les modifications pour les mots de passe devant être envoyés au canal Messenger prédéfini.
   messenger_settings_intro: "Laissez l'URL de Messenger dans la zone d'administration vide afin de ne pas envoyer de messages de Redmine à Messenger. Peu importe ce que vous avez configuré ici. Si vous souhaitez envoyer des messages de tous les projets Redmine à Messenger, renseignez l’URL. Les messages seront envoyés au canal spécifique. Si vous souhaitez uniquement être averti par certains des projets (pas tous), laissez l'URL du messager ici vide et accédez à la configuration du projet spécifique."
   messenger_settings_project_intro: "Si vous laissez vide l'URL de Messenger dans la zone d'administration au cas où vous ne seriez pas averti globalement de toutes les modifications apportées au projet, vous pouvez configurer votre URL Messenger dans les paramètres du projet."
-  messenger_url_info_html: 'Générer une <a target="_blank" href="https://github.com/AlphaNodes/redmine_messenger#prepare-your-messenger-service">Incoming WebHook</a> URL du service de messagerie. Laissez-le vide si vous souhaitez uniquement activer des projets spécifiques avec des paramètres de projet.'
-  messenger_verify_ssl_info_html: 'Si votre service Messenger utilise un certificat SSL non valide ou auto-signé, désactivez-le.'
-  messenger_wiki_intro: Activez les modifications pour les wikis à envoyer au canal Messenger prédéfini.
-  permission_manage_messenger: Gérer messenger
+  messenger_url_info_html: 'Générer une adresse <a target="_blank" href="https://github.com/AlphaNodes/redmine_messenger#prepare-your-messenger-service">Incoming WebHook</a> pour le service global de Messenger. Laisser ce champ vide pour activer uniquement des projets spécifiques avec des paramètres personnalisés pour chaque projet.'
+  messenger_verify_ssl_info_html: 'Désactiver cette vérification si votre service Messenger utilise un certificat SSL non valide ou auto-signé.'
+  messenger_wiki_intro: Activer les notifications a envoyer au canal Messenger pour l'ensemble des wikis.
+  permission_manage_messenger: Gérer Messenger
