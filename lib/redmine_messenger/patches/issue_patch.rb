@@ -60,6 +60,22 @@ module RedmineMessenger
         def send_messenger_update
           return if current_journal.nil?
 
+          should_be_sent = false
+          if !RedmineMessenger.settings[:post_actions].empty?
+            issue_update_active_actions = RedmineMessenger.settings[:post_actions]
+
+            should_be_sent = true if issue_update_active_actions.include?('any')
+
+            current_journal.details.each do |detail|
+              prop_string = detail.prop_key.to_s.sub('_id', '')
+              should_be_sent = true if issue_update_active_actions.include?(prop_string)
+            end
+          else
+            should_be_sent = true
+          end
+
+          return unless should_be_sent
+
           channels = Messenger.channels_for_project project
           url = Messenger.url_for_project project
 

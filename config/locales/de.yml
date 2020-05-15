@@ -42,6 +42,7 @@ de:
   label_settings_post_updates: Ticket Updates?
   label_settings_post_wiki_updates: Wiki Updates?
   label_settings_post_wiki: Neue Wikis?
+  label_settings_post_actions: Bei der Aktualisierung welche Felder?
   label_settings_updated_include_description: Ticket Beschreibungsupdates?
   messenger_channel_info_html: 'Hier wird der Channel dem die Nachrichten gesendet werden sollen. Es können mehrere Channel angegeben werden, indem Sie mit Komma getrennt werden.'
   messenger_contacts_intro: Legen Sie fest welche Einträge oder Änderungen für Kontakte im angegebenen Messenger Channel versendet werden.
