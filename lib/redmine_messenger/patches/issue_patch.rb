@@ -17,6 +17,8 @@ module RedmineMessenger
 
           return unless channels.present? && url
           return if is_private? && !Messenger.setting_for_project(project, :post_private_issues)
+          return if !Messenger.setting_for_project(project, :post_own_issues) && \
+                    assigned_to.present? && assigned_to.to_s.eql?(author.to_s)
 
           set_language_if_valid Setting.default_language
 
@@ -66,6 +68,8 @@ module RedmineMessenger
           return unless channels.present? && url && Messenger.setting_for_project(project, :post_updates)
           return if is_private? && !Messenger.setting_for_project(project, :post_private_issues)
           return if current_journal.private_notes? && !Messenger.setting_for_project(project, :post_private_notes)
+          return if !Messenger.setting_for_project(project, :post_own_issues) && \
+                    assigned_to.present? && assigned_to.to_s.eql?(current_journal.user.to_s)
 
           set_language_if_valid Setting.default_language
 

@@ -40,6 +40,7 @@ fr:
   label_settings_post_private_issues: Inclure les mises à jour des tickets privés
   label_settings_post_private_notes: Inclure les mises à jour des notes privées
   label_settings_post_updates: Inclure toutes les mises à jour
+  label_settings_post_own_issues: Mise à jour du ticket ?
   label_settings_post_wiki_updates: Inclure les mises à jour du wiki
   label_settings_post_wiki: Inclure les publications du wiki
   label_settings_updated_include_description: Inclure la description suite à une mise à jour

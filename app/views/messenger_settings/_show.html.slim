@@ -40,6 +40,7 @@
     = render partial: 'messenger_settings/messenger_select', locals: { f: f, mf: :updated_include_description }
     = render partial: 'messenger_settings/messenger_select', locals: { f: f, mf: :post_private_issues }
     = render partial: 'messenger_settings/messenger_select', locals: { f: f, mf: :post_private_notes }
+    = render partial: 'messenger_settings/messenger_select', locals: { f: f, mf: :post_own_issues }
 
   fieldset#messenger_settings.box.tabular
     legend = l(:label_wiki)

@@ -28,6 +28,7 @@ Redmine::Plugin.register :redmine_messenger do
     post_private_db: '0',
     post_private_issues: '0',
     post_private_notes: '0',
+    post_own_issues: '1',
     post_wiki: '0',
     post_wiki_updates: '0',
     post_db: '0',

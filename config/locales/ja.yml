@@ -40,6 +40,7 @@ ja:
   label_settings_post_private_issues: プライベートチケットの更新
   label_settings_post_private_notes: プライベート注記の更新
   label_settings_post_updates: チケットの更新
+  label_settings_post_own_issues: 自分のチケットを自分で更新
   label_settings_post_wiki_updates: Wikiの更新
   label_settings_post_wiki: Wikiの作成
   label_settings_updated_include_description: チケット更新時に説明を含める
