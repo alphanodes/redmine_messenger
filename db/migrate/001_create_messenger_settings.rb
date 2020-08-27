@@ -14,6 +14,7 @@ class CreateMessengerSettings < ActiveRecord::Migration[4.2]
       t.integer :updated_include_description, default: 0, null: false
       t.integer :post_private_issues, default: 0, null: false
       t.integer :post_private_notes, default: 0, null: false
+      t.integer :post_own_issues, default: 0, null: false
       t.integer :post_wiki, default: 0, null: false
       t.integer :post_wiki_updates, default: 0, null: false
       t.integer :post_db, default: 0, null: false

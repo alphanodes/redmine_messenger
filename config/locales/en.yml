@@ -41,6 +41,7 @@ en:
   label_settings_post_private_issues: Private issue updates?
   label_settings_post_private_notes: Private notes updates?
   label_settings_post_updates: Issue updates?
+  label_settings_post_own_issues: Your update of your own issues?
   label_settings_post_wiki_updates: Wiki updates?
   label_settings_post_wiki: Post Wiki added?
   label_settings_updated_include_description: Description in update issue?

@@ -55,6 +55,9 @@ fieldset#messenger_settings.box.tabular
   p
     = tag.label l(:label_settings_post_private_notes)
     = check_box_tag 'settings[post_private_notes]', 1, @settings[:post_private_notes].to_i == 1
+  p
+    = content_tag(:label, l(:label_settings_post_own_issues))
+    = check_box_tag 'settings[post_own_issues]', 1, @settings[:post_own_issues].to_i == 1
 
 fieldset#messenger_settings.box.tabular
   legend = l(:label_wiki)
