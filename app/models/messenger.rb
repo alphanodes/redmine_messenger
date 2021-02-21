@@ -12,7 +12,7 @@ class Messenger
       #
       # Redmine::WikiFormatting.html_parser.to_text(text)
 
-      text = +text.to_s
+      text = text.to_s.dup
 
       # @see https://api.slack.com/reference/surfaces/formatting#escaping
 
