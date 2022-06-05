@@ -4,6 +4,7 @@ messenger_url: ''
 messenger_icon: 'https://raw.githubusercontent.com/alphanodes/redmine_messenger/master/assets/images/icon.png'
 messenger_channel: 'redmine'
 messenger_username: 'robot'
+filter_status: ''
 messenger_verify_ssl: 1
 messenger_direct_users_messages: 0
 auto_mentions: 0

@@ -33,6 +33,7 @@
     br
     = render partial: 'messenger_settings/messenger_select', locals: { f: f, mf: :auto_mentions }
     = render partial: 'messenger_settings/messenger_text', locals: { f: f, mf: :default_mentions, size: 30 }
+    = render partial: 'messenger_settings/messenger_text', locals: { f: f, mf: :filter_status, size: 30 }
     = render partial: 'messenger_settings/messenger_select', locals: { f: f, mf: :display_watchers }
     = render partial: 'messenger_settings/messenger_select', locals: { f: f, mf: :post_updates }
     = render partial: 'messenger_settings/messenger_select', locals: { f: f, mf: :new_include_description }
