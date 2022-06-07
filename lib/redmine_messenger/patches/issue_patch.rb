@@ -25,7 +25,7 @@ module RedmineMessenger
 
           return unless channels.present? && url
           return if is_private? && !Messenger.setting_for_project(project, :post_private_issues)
-          return if !RedmineMessenger.setting(:filter_status).empty? && status.to_s != RedmineMessenger.setting(:filter_status)
+          return if !Messenger.textfield_for_project(project, :filter_status).empty? && status.to_s != Messenger.textfield_for_project(project, :filter_status)
 
           set_language_if_valid Setting.default_language
 
@@ -81,7 +81,7 @@ module RedmineMessenger
           return unless channels.present? && url && Messenger.setting_for_project(project, :post_updates)
           return if is_private? && !Messenger.setting_for_project(project, :post_private_issues)
           return if current_journal.private_notes? && !Messenger.setting_for_project(project, :post_private_notes)
-          return if !RedmineMessenger.setting(:filter_status).empty? && status.to_s != RedmineMessenger.setting(:filter_status)
+          return if !Messenger.textfield_for_project(project, :filter_status).empty? && status.to_s != Messenger.textfield_for_project(project, :filter_status)
 
           set_language_if_valid Setting.default_language
 
