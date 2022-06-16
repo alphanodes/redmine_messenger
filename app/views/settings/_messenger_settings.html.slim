@@ -35,7 +35,7 @@ fieldset#messenger_settings.box.tabular
     em.info = t :default_mentionsl_info
   p
     label = l :label_settings_filter_status
-    = text_field_tag 'settings[filter_status]', @settings[:filter_status], size: 30
+    = text_field_tag 'settings[filter_status]', @settings[:filter_status], size: 60
   p
     label = l :label_settings_display_watchers
     = check_box_tag 'settings[display_watchers]', 1, @settings[:display_watchers].to_i == 1
