@@ -262,11 +262,10 @@ class Messenger
 
     def filtred_statuses(project)
       statuses = []
-      if textfield_for_project(project, :filter_status).nil?
-        return []
-      end
+      return [] if textfield_for_project(project, :filter_status).nil?
+
       textfield_for_project(project, :filter_status).split(',').each { |m| statuses.push m.strip }
-      statuses.present? ? statuses : nil
+      statuses.presence
     end
 
     private
