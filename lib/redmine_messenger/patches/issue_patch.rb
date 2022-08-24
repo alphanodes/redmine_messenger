@@ -14,6 +14,7 @@ module RedmineMessenger
 
       module InstanceMethods
         def send_messenger_create
+          filtred_statuses = Messenger.filtred_statuses project
           channels = Messenger.channels_for_project project
           url = Messenger.url_for_project project
 
@@ -25,6 +26,7 @@ module RedmineMessenger
 
           return unless channels.present? && url
           return if is_private? && !Messenger.setting_for_project(project, :post_private_issues)
+          return if !Messenger.textfield_for_project(project, :filter_status).empty? && filtred_statuses.exclude?(status.to_s)
 
           set_language_if_valid Setting.default_language
 
@@ -68,6 +70,7 @@ module RedmineMessenger
         def send_messenger_update
           return if current_journal.nil?
 
+          filtred_statuses = Messenger.filtred_statuses project
           channels = Messenger.channels_for_project project
           url = Messenger.url_for_project project
 
@@ -80,6 +83,7 @@ module RedmineMessenger
           return unless channels.present? && url && Messenger.setting_for_project(project, :post_updates)
           return if is_private? && !Messenger.setting_for_project(project, :post_private_issues)
           return if current_journal.private_notes? && !Messenger.setting_for_project(project, :post_private_notes)
+          return if !Messenger.textfield_for_project(project, :filter_status).empty? && filtred_statuses.exclude?(status.to_s)
 
           set_language_if_valid Setting.default_language
 

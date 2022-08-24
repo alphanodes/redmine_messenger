@@ -260,6 +260,14 @@ class Messenger
       names.present? ? " To: #{names.uniq.join ', '}" : nil
     end
 
+    def filtred_statuses(project)
+      statuses = []
+      return [] if textfield_for_project(project, :filter_status).nil?
+
+      textfield_for_project(project, :filter_status).split(',').each { |m| statuses.push m.strip }
+      statuses.presence
+    end
+
     private
 
     def object_field_value(klass, id)
