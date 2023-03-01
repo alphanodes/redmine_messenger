@@ -14,6 +14,8 @@ module RedmineMessenger
 
       module InstanceMethods
         def send_messenger_create
+          filter_issue_trackers = Messenger.textfield_for_project project, :filter_issue_trackers
+          filter_issue_statuses = Messenger.textfield_for_project project, :filter_issue_statuses
           channels = Messenger.channels_for_project project
           url = Messenger.url_for_project project
 
@@ -25,6 +27,8 @@ module RedmineMessenger
 
           return unless channels.present? && url
           return if is_private? && !Messenger.setting_for_project(project, :post_private_issues)
+          return if !filter_issue_trackers.empty? && filter_issue_trackers.exclude?(tracker.id)
+          return if !filter_issue_statuses.empty? && filter_issue_statuses.exclude?(status.id)
 
           initial_language = ::I18n.locale
           begin
@@ -73,6 +77,8 @@ module RedmineMessenger
         def send_messenger_update
           return if current_journal.nil?
 
+          filter_issue_trackers = Messenger.textfield_for_project project, :filter_issue_trackers
+          filter_issue_statuses = Messenger.textfield_for_project project, :filter_issue_statuses
           channels = Messenger.channels_for_project project
           url = Messenger.url_for_project project
 
@@ -85,6 +91,8 @@ module RedmineMessenger
           return unless channels.present? && url && Messenger.setting_for_project(project, :post_updates)
           return if is_private? && !Messenger.setting_for_project(project, :post_private_issues)
           return if current_journal.private_notes? && !Messenger.setting_for_project(project, :post_private_notes)
+          return if !filter_issue_trackers.empty? && filter_issue_trackers.exclude?(tracker.id)
+          return if !filter_issue_statuses.empty? && filter_issue_statuses.exclude?(status.id)
 
           initial_language = ::I18n.locale
           begin

@@ -15,4 +15,24 @@ class MessengerSetting < ActiveRecord::Base
 
     setting
   end
+
+  def filter_issue_statuses=(value)
+    super(value.reject(&:empty?).join(','))
+  end
+
+  def filter_issue_statuses
+    return self[:filter_issue_statuses].split(',').map(&:to_i) if self[:filter_issue_statuses]
+
+    self[:filter_issue_statuses]
+  end
+
+  def filter_issue_trackers=(value)
+    super(value.reject(&:empty?).join(','))
+  end
+
+  def filter_issue_trackers
+    return self[:filter_issue_trackers].split(',').map(&:to_i) if self[:filter_issue_trackers]
+
+    self[:filter_issue_trackers]
+  end
 end

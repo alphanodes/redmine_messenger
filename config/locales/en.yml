@@ -19,6 +19,8 @@ en:
   label_messenger_wiki_created: "%{project_url} - Wiki %{url} created by *%{user}*"
   label_messenger_wiki_updated: "%{project_url} - Wiki %{url} updated by *%{user}*"
   label_messenger: Messenger
+  label_settings_filter_issue_statuses: Notify when issue status is
+  label_settings_filter_issue_trackers: Notify when issue tracker is
   label_settings_auto_mentions: Convert names to mentions?
   label_settings_default_mentions: Default people for mentions
   label_settings_display_watchers: Display watchers?
@@ -43,6 +45,7 @@ en:
   label_settings_post_wiki_updates: Wiki updates?
   label_settings_post_wiki: Post Wiki added?
   label_settings_updated_include_description: Description in update issue?
+  label_all: All
   messenger_channel_info_html: 'Here you have to specify the channel, which should be used. You can define multiple channels, seperated by comma'
   messenger_contacts_intro: Activate the changes for Issues that should be sent to the pre-defined Messenger channel.
   messenger_db_intro: Activate the changes for DB that should be sent to the pre-defined Messenger channel.
