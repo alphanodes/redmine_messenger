@@ -31,6 +31,8 @@
     legend = l :label_issue_plural
     .info = t :messenger_issue_intro
     br
+    = render 'messenger_settings/messenger_multi_select', f: f, mf: :filter_issue_trackers, data_source: :issue_trackers
+    = render 'messenger_settings/messenger_multi_select', f: f, mf: :filter_issue_statuses, data_source: :issue_statuses
     = render 'messenger_settings/messenger_select', f: f, mf: :auto_mentions
     = render 'messenger_settings/messenger_text', f: f, mf: :default_mentions, size: 30
     = render 'messenger_settings/messenger_select', f: f, mf: :display_watchers

@@ -1,0 +1,7 @@
+p
+  = f.select mf, method(data_source).call(@messenger_setting.send(mf)), { label: l("label_settings_#{mf}") }, { multiple: true, size: 5 }
+  '
+  em.info style="display: inline;"
+    = l :label_default
+    ' :
+    = l :label_all
